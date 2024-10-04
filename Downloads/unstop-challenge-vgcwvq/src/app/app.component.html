@@ -1,0 +1,16 @@
+<div>
+  <h1>{{ name }} Seat Reservation</h1>
+  <div>
+    <label for="seats">Enter number of seats to book (1-7):</label>
+    <input #seatsInput type="number" id="seats" />
+    <button (click)="bookSeats(seatsInput.value)">Book Seats</button>
+  </div>
+
+  <h2>Coach Layout</h2>
+  <div *ngFor="let row of seatMap; let rowIndex = index" class="row">
+    <span *ngFor="let seat of row; let seatIndex = index"
+          [class.reserved]="seat">{{ getSeatNumber(rowIndex, seatIndex) }}</span>
+  </div>
+
+  <h3>Reserved Seats: {{ reservedSeats.join(', ') }}</h3>
+</div>

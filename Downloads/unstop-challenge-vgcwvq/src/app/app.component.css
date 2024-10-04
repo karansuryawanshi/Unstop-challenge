@@ -1,0 +1,31 @@
+.row {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.row span {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 12px;
+}
+
+span {
+  display: inline-block;
+  width: 60px;
+  height: 50px;
+  line-height: 30px;
+  margin-right: 5px;
+  border: 1px solid #000;
+  background-color: #4caf50;
+  text-align: center;
+  justify-content: center;
+}
+
+span.reserved {
+  background-color: #e93929;
+  color: white;
+  display: flex;
+}
